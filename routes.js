@@ -4,12 +4,12 @@ import {
   CardStyleInterpolators,
 } from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
-import Navigator from './Resuables/RefNavigation';
-import Home from './Main/Home';
-import SingleProduct from './Main/SingleProduct';
-import MyCart from './Main/MyCart';
-import PersonalInfoTakenEasy from './Main/PersonalInfoTakenEasy';
-import SearchTakenEasy from './Main/SearchTakenEasy';
+import Navigator from './OurResuables/RefNavigation';
+import OurHome from './Main/OurHome';
+import OurSingleProduct from './Main/OurSingleProduct';
+import PersonalInfoShiningLamp from './Main/PersonalInfoShiningLamp';
+import SearchShiningLamp from './Main/SearchShiningLamp';
+import OurFavourites from './Main/OurFavourites';
 const Stack = createStackNavigator();
 
 function Routes(props) {
@@ -19,19 +19,19 @@ function Routes(props) {
         Navigator.InitializeRefNavigation(ref);
       }}>
       <Stack.Navigator
-        initialRouteName="Home"
+        initialRouteName="OurHome"
         screenOptions={{
           headerShown: false,
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}>
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="SingleProduct" component={SingleProduct} />
-        <Stack.Screen name="MyCart" component={MyCart} />
+        <Stack.Screen name="OurHome" component={OurHome} />
+        <Stack.Screen name="OurSingleProduct" component={OurSingleProduct} />
         <Stack.Screen
-          name="PersonalInfoTakenEasy"
-          component={PersonalInfoTakenEasy}
+          name="PersonalInfoShiningLamp"
+          component={PersonalInfoShiningLamp}
         />
-        <Stack.Screen name="SearchTakenEasy" component={SearchTakenEasy} />
+        <Stack.Screen name="SearchShiningLamp" component={SearchShiningLamp} />
+        <Stack.Screen name="OurFavourites" component={OurFavourites} />
       </Stack.Navigator>
     </NavigationContainer>
   );
